@@ -1,0 +1,6 @@
+#include<stdio.h>
+#include<conio.h>
+Void main()
+{
+Printf("hello world")
+}
