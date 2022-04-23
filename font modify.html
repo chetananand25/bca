@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <title>font dilog</title>
+    <script type="text/JavaScript"></script>
+    <style type="text/css">
+      #box
+      {
+        width: 300px; overflow: scroll;
+        height: 200px;
+        border: 1px solid red;
+        
+      }
+      
+    </style>
+  </head>
+  <body>
+    <center>
+      <form>
+        <table>
+          <tr><td>Font name</td>
+          <td> <input type="text" id="FN"></td></tr>
+           <tr><td>Font Size</td>
+          <td> <input type="text" id="FS"></td></tr>
+           <tr><td>Font Color</td>
+          <td> <input type="text" id="FC"></td></tr>
+           <tr><td>Select background color</td>
+          <td> <input type="color" id="BC"></td></tr>
+          
+        
+          <tr><td> <input type="button" value="Change" onclick="ChangeFont()"></td></tr>
+          
+          <input type="reset" value="reset" >
+          <input type="button" value="Exit" onclick="window.close()">
+          </td></tr>
+        </table>
+      </form>
+      <div id="box"> welcome to JavaScript<br> client sided scripting language <br> data validation</div>
+    </center>
+  </body>
+</html>
+<script>
+  function ChangeFont(){
+    var Fname,Fsize,Fcolor,Bcolor;
+    
+    Fname=document.getElementById("FN").value
+    
+    Fsize=document.getElementById("FS").value
+    Fcolor=document.getElementById("FC").value
+    Bcolor=document.getElementById("BC").value
+  document.getElementById("box").style.fontSize=Fsize;
+  document.getElementById("box").style.color=Fcolor;
+  document.getElementById("box").style.background=Bcolor;
+  }
+  </script>

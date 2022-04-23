@@ -1,0 +1,83 @@
+<html>
+  <head>
+    <title>calculator</title>
+    <script type="text/JavaScript">
+          var a,b,rs;
+    function findadd(){
+      a=parseInt(document.getElementById("FN").value);
+      b=parseInt(document.getElementById("SN").value);
+      rs=a+b;
+      document.getElementById("rs").value= rs;
+    }
+        function findsub()
+        {
+          a = parseInt(document.getElementById("FN").value);
+          b = parseInt(document.getElementById("SN").value);
+          rs=a-b;
+          document.getElementById("rs").value=rs;
+        }
+            function findmult()
+            {
+              a = parseInt(document.getElementById("FN").value);
+              b = parseInt(document.getElementById("SN").value);
+              rs = a * b;
+              document.getElementById("rs").value=rs;
+            }
+               function finddiv()
+                {
+                  a = parseInt(document.getElementById("FN").value);
+                  b = parseInt(document.getElementById("SN").value);
+                  rs = a / b;
+                  document.getElementById("rs").value=rs;
+                }
+    </script>
+    
+  </head>
+  <body bgcolor="skyblue">
+    
+    <center>
+          <fieldset style="width: 300px">
+            <b>CALCULATOR</b>
+      <b><hr color="purple"></b>
+      <form>
+        <table>
+          <tr>
+            <td><b>FRIST NO :- </b></td>
+            <td><input type="text" id="FN"></td>
+          </tr>
+          
+          <tr>
+            <td><b>SECOND NO :-</b></td>
+            <td><input type="text" id="SN"></td>
+          </tr>
+               
+          <tr>
+            <td><b>RESULT :- </b></td>
+            <td><input type="text" id="rs"></td>
+          </tr>
+        </table>
+    <center>
+     <table bgcolor="voilet" colspan="2">
+       <tr><td align="center">
+                 <input type="button" value="+" onclick="findadd()">
+  
+                 <input type="button" value="-" onclick="findsub()">
+  <br>
+                 <input type="button" value="*" onclick="findmult()">
+
+                 <input type="button" value="/" onclick="finddiv()">
+ <br>
+                 <input type="reset" value="reset">
+
+                 <input type="button" value="exit" onclick="window.close()">
+               </td>
+               </tr>
+               
+     </table>
+    </center>
+    </fieldset>
+        </table>
+      </form>
+    </center>
+  </body>
+</html>

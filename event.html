@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <script type="text/JavaScript">
+      function ChangeBackColor(){
+        document.body.style.backgroundColor="grey"
+       document.bgColor="";
+      document.fgColor=""
+        }
+     function ChangeColor(){
+       document.bgColor=document.getElementById("co").value;
+     }
+     function Convert(){
+       var s=document.getElementsById("pan").value;
+       document.getElementById("pan").value=s.toUpperCase();
+     }
+       
+    </script>
+  </head>
+  <body //onload="ChangeBackColor()">
+    welcome to Event in JavaScript<br>
+    Select any color<br>
+    <<select name="co" id="co" onchange="ChangeColor()">
+      <<option value="red">red</option>
+      <<option value="blue">blue</option>
+      <<option value="green">green</option>
+    </select>
+    pan no <input type="text" id="pan" onkeyup="Convert()"
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<html>
+
+<head>
+    <title>
+        Check a number is Prime or not using JavaScript
+    </title>
+    <style type="text/css">
+        #box {
+            width: 300px;
+            height: 200px;
+            overflow: scroll;
+            border: 2px solid green;
+            font-size: 20px;
+            color: voilet;
+            background: deepskyblue;
+        }
+    </style>
+
+    <script type="text/javascript">
+        function CheakP() {
+
+            var n, i, flag = true;
+            n = document.getElementById("txt").value;
+            n = parseInt(n)
+            for (i = 2; i <= n - 1; i++)
+                if (n % i == 0) {
+                    flag = false;
+                    break;
+                }
+
+            if (flag == true)
+                document.getElementById("box").innerHTML = " is prime" + n;
+            else
+                document.getElementById("box").innerHTML = " is prime";
+        }
+    </script>
+</head>
+
+<body>
+    <h1>GeeksforGeeks</h1>
+
+    <h4>check number is prime or not</h4>
+
+    <hr color="Green">
+
+    <form name="myform">
+        Enter the number:
+        <input type="text" id="txt">
+
+        <br><br>
+
+        <input type="button" value="Check" onClick="CheakP()">
+        <br>
+    </form>
+
+</body>
+<div id="box"></div>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>ARRAY PROGRAM</title>
+</head>
+<body>
+  <script>
+    var n ,esum=0,osum=0;
+    n=parseInt(prompt("enter size of array"));
+    var a= new Array(n);
+    var i;
+    for(i=0;i<a.length;i++)
+    {
+      a[i]=parseInt(prompt("enter value"));
+    }
+    for(i=0; i<a.length;i++)
+    {
+      if(a[i]%2==0)
+      esum+=a[i];
+      else
+      osum+=a[i];
+    }
+    document.write("sum of even ="+esum+
+    "<br>"+"sum of odd ="+osum);
+  </script>
+</body>
+</html>

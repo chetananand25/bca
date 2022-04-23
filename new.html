@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document</title>
+</head>
+<body>
+<script>
+  r=parseInt(prompt("enter size of row"))
+  c=parseInt(prompt("enter size of column"))
+
+// Create one dimensional array
+    var a = new Array(r);
+  
+document.write("Creating 2D array <br>");
+  
+// Loop to create 2D array using 1D array
+for (var i = 0; i < a.length; i++) {
+    a[i] = new Array(c);
+}
+  
+var h = 0;
+  
+// Loop to initialize 2D array elements.
+for (var i = 0; i < r; i++) {
+    for (var j = 0; j <c ; j++) {
+        a[i][j] = h++;
+    }
+}
+  
+// Loop to display the elements of 2D array. 
+for (var i = 0; i < c; i++) {
+    for (var j = 0; j < 2; j++)    {
+        document.write(a[i][j] + " ");
+    }
+    document.write("<br>");
+} 
+</script>         
+</body>
+</html>

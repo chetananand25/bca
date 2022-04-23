@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    #box {
+      width: 300px;
+      height: 200px;
+      overflow: scroll;
+      border: 2px solid snow;
+      font-size: 20px;
+      color: black;
+      box-shadow: 10px;
+      background: snow;
+    }
+  </style>
+  <script>
+    var i = 0;
+    var array = Array();
+
+    function add()
+    {
+      array[i] = document.getElementById("text1").value;
+      alert("Element: " + array[i] + " Added at index " + i);
+      i++;
+      document.getElementById("text1").value = "";
+
+      var e = "<hr/>";
+
+      for (var y = 0; y < array.length; y++)
+      {
+        e += "Element " + y + " = " + array[y] + "<br/>";
+      }
+      document.getElementById("demo2").innerHTML = e;
+    }
+
+
+    function show() {
+      document.getElementById("box").innerHTML="GREATEST"+"="+min+"<br>"+"LOWEST"+"="+max+"<br>"+"SORT NO"+"="+"<br>"+b;
+}
+
+    function sort() {
+      array.sort();
+     b= document.getElementById("demo2").innerHTML = array;
+    
+      
+    }
+
+    function findMax() {
+      max = Math.max(...array);
+      document.getElementById("demo2").innerHTML = max;
+    }
+
+    function findMin() {
+      min = Math.min(...array);
+      document.getElementById("demo2").innerHTML = min;
+
+    }
+
+    function Search(A) {
+      e = document.getElementById("text1").value;
+      return A == e;
+    }
+
+    function FindArray() {
+      document.getElementById("demo2").innerHTML = array.find(Search);
+    }
+  </script>
+</head>
+
+<body>
+  <center>
+
+    <fieldset style="width: 300px">
+      <h2>ARRAY</h2>
+      <p id="demo2"></p>
+      <input type="text" id="text1">
+      <button type="submit" onclick="add()">ADD+</button>
+
+      <br><br>
+      <table>
+        <tr>
+          <td>
+            <button type="submit" style="font-size: 24px" onclick="show()">SHOW</button>
+            <button type="submit" style="font-size: 24px" onclick="FindArray()">search</button>
+
+            <button type="submit" style="font-size: 24px" onclick="sort()">SORT</button>
+            <br><br>
+
+            <button type="submit" style="font-size: 24px" onclick="findMax()">GREATEST</button>
+
+            <button type="submit" style="font-size: 24px" onclick="findMin()">LOWEST</button>
+          </td>
+        </tr>
+
+      </table>
+      <div id="box"></div>
+
+    </fieldset>
+  </center>
+
+</body>
+
+</html>

@@ -1,0 +1,125 @@
+<html>
+
+<head>
+  <title>MARK SHEET</title>
+  <style>
+    #box {
+      width: 300px;
+      height: 200px;
+      overflow: scroll;
+      border: 2px solid green;
+      font-size: 20px;
+      color: white;
+      background: black;
+    }
+
+    #42445A
+  </style>
+  <script type="text/JavaScript">
+
+    function findadd(){
+      a=parseInt(document.getElementById("FN").value);
+      b=parseInt(document.getElementById("SN").value);
+      rs=a+b;
+      document.getElementById("rs").value= rs;
+    }
+
+   function calculatemarks()
+   {
+     m1=parseInt(document.getElementById("t1").value);
+     m2=parseInt(document.getElementById("t2").value);
+     m3=parseInt(document.getElementById("t3").value);
+   
+     tm=m1+m2+m3;
+     pm = tm / 3;
+     if (pm >= 95)
+       rm = "outstanding";
+     else if (pm > 90)
+       rm = "excellent";
+     if (pm >= 75)
+       rm = "very good";
+     if (pm >= 60)
+       rm = "good";
+     if (pm >= 45)
+       rm = "poor";
+     else
+       rm = "fail"
+     document.getElementById("tm").value= tm;
+     document.getElementById("pm").value= pm;
+     document.getElementById("rm").value= rm;
+   }
+ function ShowMarks(){
+   rn1=document.getElementById("rn").value;
+   nm1=document.getElementById("n").value;
+   course=document.getElementById("c").value;
+   bod=document.getElementById("dob").value;
+   
+   document.getElementById("box").innerHTML="Name="+nm1+"<br>"+"roll no="+rn1+"<br>"+"Course="+course+"<br>"+"date of birth="+bod+"<br>"+"total marks="+tm+"<br>"+"persentage="+pm+"<br>"+"remarks="+rm;
+
+ }
+ </script>
+</head>
+<body bgcolor="">
+  <center>
+  <form>
+    <fieldset style="width: 300px">
+
+      <table bgcolor="skyblue">
+               <center><h1 align="center">Marksheet</h1></center>
+               <hr>
+</td>
+        <tr><td align="center" colspan="">
+        <tr><tr><td>Roll</td><td><input type="number" id="rn" required placeholder="enter roll"></td></tr>
+        <tr><td>name</td><td><input type="name" id="n" required placeholder="enter name"></td></tr>
+        <tr><td>DOB</td><td><input type="date" id="dob" required placeholder="enter dob"></td>
+        <tr><td>select course</td><td>
+            <select id="c" required>
+              <option>bbm</option>
+              <option>bcom</option>
+              <option>bsc-it</option>
+              <option>bca</option>
+            </select>
+          </td></tr>
+          <tr><td>nationality</td><td><input type="radio" name="nationality" value="Indian">indian
+            <input type="radio" name="nationality" value="Nri">Nri</td></tr>
+
+         <tr><td>gender</td><td><input type="radio" name="gender" id="g1" value="male">male
+          <input type="radio" name="gender" id="g2" value="female">female</td></tr>
+          
+          <b><hr></b>
+          
+        <table align="center" bgcolor="voilet">
+
+        <td colspan="2"><input type="reset" value="reset"></td>
+        <td colspan="2"><input type="button" value="exit" onclick="window.close();"></td></tr>
+                          </table>
+                       <b><hr></b>   
+        <table bgcolor="skyblue">
+               <center><h1 align="center">Marksheet detail</h1></center>
+        <b><hr color="black"></b>
+        <tr><td align="center" colspan="">
+        <tr><td><b>C:-</b></td><td><input type="text" name="marksheet detail" id="t1"></td></tr>
+        <tr><td><b>C++:-</b></td><td><input type="text" name="marksheet detail" id="t2"></td></tr>
+        <tr><td><b>JAVA:-</b></td><td><input type="text" name="marksheet detail" id="t3"></td></tr>
+        <tr><td><b>Total marks:-</b></td><td><input type="text" name="marksheet detail" id="tm"></td></tr>
+        <br>
+       <b><hr></b>
+       
+        <tr><td><b>Present:-</b></td><td><input type="text" name="marksheet detail" id="pm"></td></tr>
+        <tr><td><b>Remarks:-</b></td><td><input type="text" name="marksheet detail" id="rm"></td></tr>
+        <br>
+        
+         <table align="center" bgcolor="voilet">
+
+        <tr><td><input type="button" value="CALCULATE" onclick="calculatemarks()"></td>
+        <td colspan="2"><input type="button" value="show" onclick="ShowMarks();"></td></tr>
+
+ </table>
+  </form>
+  <center><b><hr color="black" align="center"></b></center>
+<div id="box"></div>
+
+  </center>
+</body>
+</fieldset>
+</html>

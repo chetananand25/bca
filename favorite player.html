@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>player</title>
+  <script type="text/javascript">
+    function ShowPlayer() {
+      var rs = "";
+      if (document.getElementById("r1").checked == true)
+        rs = rs + document.getElementById("r1").value + "<br>";
+      if (document.getElementById("r2").checked == true)
+        rs = rs + document.getElementById("r2").value + "<br>";
+      if (document.getElementById("r3").checked == true)
+        rs = rs + document.getElementById("r3").value + "<br>";
+      if (document.getElementById("r4").checked == true)
+        rs = rs + document.getElementById("r4").value + "<br>";
+      if (document.getElementById("r5").checked == true)
+        rs = rs + document.getElementById("r5").value + "<br>";
+      document.getElementById("box").innerHTML = rs;
+    }
+  </script>
+
+  <style type="text/css">
+    #box {
+      height: 100px;
+      width: 400px;
+      border: 2px solid red;
+      text-align: center;
+      line-height: 100px;
+      font-size: 30px;
+      color: green;
+    }
+  </style>
+</head>
+
+<body>
+  <center>
+    <form>
+      <table border="">
+        <tr>
+          <td>
+            SELECT YOUR FAVORITE PLAYER
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="checkbox" id="r1" value="virat kohili"> virat kohili
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <input type="checkbox" id="r2" value="sehwag"> sehwag
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="checkbox" id="r3" value="Ganguly"> Ganguly
+          </td>
+        </tr>
+          <td>
+            <input type="checkbox" id="r4" value="dhoni"> Dhoni
+          </td>
+        <tr>
+          <td>
+            <input type="checkbox" id="r5" value="Dravid">Dravid
+          </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="button" id="" value="SHOW" onclick="ShowPlayer()">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="button" id="" value="Exit" onclick="window.close()">
+            </td>
+          </tr>
+      </table>
+      <div id="box"></div>
+    </form>
+  </center>
+</body>
+
+</html>

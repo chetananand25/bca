@@ -1,0 +1,9 @@
+body #box {
+  width: 300px;
+  height: 200px;
+  overflow: scroll;
+  border: 2px solid green;
+  font-size: 20px;
+  color: voilet;
+  background: deepskyblue;
+}

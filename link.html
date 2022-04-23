@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>link</title>
+  <style>
+   #box {
+  width: 300px;
+  height: 200px;
+  overflow: scroll;
+  border: 2px solid green;
+  font-size: 20px;
+  color: voilet;
+  background: deepskyblue;
+}
+  </style>
+  
+  <script>
+  function showLink(){
+    link=document.getElementById("link").value;
+    if(link=="google.com")
+    window.location="https://www.google.com/";
+    else if(link=="gmail.com")
+    window.location="https://mail.google.com/mail/u/0/";
+    else if(link=="facebook.com")
+    window.location="https://www.facebook.com";
+    else if (link == "twitter.com")
+    window.location = "https:/www.twitter.com";
+ 
+    
+  }
+  </script>
+</head>
+
+<body bgcolor="rain">
+<center>
+    <div id="box">
+  <table>
+      
+    <tr><td><u>SELECT YOUR WEB LINK</u></td></tr>
+  <center>
+    <tr><td><select id="link">
+      <option value="google.com">GOOGLE</option>
+      <option value="gmail.com">GMAIL</option>
+      <option value="facebook.com">FACEBOOK</option>
+      <option value="twitter.com">TWITTER</option>
+    </select>
+    </center>
+    </td></tr>
+    <tr><td><input type="button" value="OPEN" onclick="showLink();"></td></tr>
+
+  </table>
+    </div>
+</center>
+</body>
+
+</html>

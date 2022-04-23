@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>show name</title>
+    <style type="text/css">
+       #box {
+      width: 300px;
+      height: 200px;
+      overflow: scroll;
+      border: 2px solid green;
+      font-size: 20px;
+      color: rgb(242, 11, 250);
+      background: rgb(107, 153, 147);
+    }
+    </style>
+
+<script type="text/javascript">
+    function ShowName(){
+        a=document.getElementById("fnm").value;
+        b=document.getElementById("mnm").value;
+        c=document.getElementById("lnm").value;
+        document.getElementById("box").innerHTML="frist"+a+"<br>"+"middle"+b;
+
+    }
+
+</script>
+
+
+</head>
+<body>
+
+
+
+    <form>
+frist name <input type="text" id="fnm">
+middle name <input type="text" id="mnm">
+last name <input type="text" id="lmn">
+
+<input type="button" value="show" onclick="ShowName();">
+
+
+<div id="box"></div>
+</form>
+</body>
+
+
+</html>

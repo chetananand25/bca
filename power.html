@@ -1,0 +1,48 @@
+<html>
+
+<head>
+  <title>Power</title>
+  <style>
+    #rs {
+      width: 300px;
+      height: 200px;
+      overflow: scroll;
+      border: 2px solid snow;
+      font-size: 20px;
+      color: black;
+      box-shadow: 10px;
+      background: snow;
+    }
+  </style>
+  <script>
+    function FindPower() {
+      a = document.getElementById("base").value;
+      b = document.getElementById("exponent").value;
+
+      value = Math.pow(a, b);
+      document.getElementById("rs").innerHTML = "Power" + "=" + value;
+    }
+  </script>
+</head>
+
+<body>
+  <center>
+    <fieldset style="width: 430px">
+      <table>
+        <tr>
+          <td>Base<input type="text" name="" id="base"></td>
+          <td> Exponent<input type="text" name="" id="exponent"></td>
+        </tr>
+        <table>
+          <tr>
+            <td><button type="submit" onclick="FindPower()">POWER</button>
+            </td>
+          </tr>
+        </table>
+      </table>
+      <div id="rs"></div>
+    </fieldset>
+  </center>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>login</title>
+  <script>
+    function checklogin(){
+      var unm, pnm;
+    
+      unm= document.getElementById("unm").value;
+      pnm= document.getElementById("pnm").value;
+      
+if (unm=="Anand25" && pnm=="C25anand")
+document.redirect=home.html;
+
+else if (unm!="Anand25"& pnm!="C25anand")
+
+alert ("both user name and password is invalid ");
+else if(unm!="Anand25")
+alert("username is invalid ");
+else
+alert("password is invalid ");
+    }
+
+  </script>
+</head>
+
+<body>
+  <center>
+  <fieldset style="width: 300px">
+  <form>
+    <table>
+      <b> Login page<hr></b>
+      <tr>
+        <td>Username</td><td><input type="text" required placeholder="enter username " id="unm" name="pname"><td><input type="button" value="Forgot user" onclick=""></td>
+        
+      </tr>
+        <tr>
+        <td>Password</td><td><input type="password" required placeholder="enter password" id="pnm" name="pname"></td><td><input type="button" value="Forgot password" onclick=""></td>
+      </tr>
+      <tr>
+        <td><input type="button" value="login" onclick="checklogin();"></td>
+      </tr>
+    </table>
+  </form>
+  </fieldset>
+  </center>
+
+</body>
+
+</html>

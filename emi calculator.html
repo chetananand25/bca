@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>EMI CALCULATER</title>
+    <style type="text/css">
+        #box {
+            width: 300px;
+            height: 200px;
+            border: 2px solid green;
+            font-size: 20px;
+            color: voilet;
+            background: deepskyblue;
+        }
+    </style>
+    <script type="text/javascript">
+        function Ecalculater() {
+
+            // Extracting value in the amount  
+
+            // section in the variable 
+
+            const la = document.getElementById("lamt").value;
+            const li = document.getElementById("lint").value;
+            const ld = document.getElementById("ltim").value;
+
+            // Calculating interest per month 
+
+            const interest = (la * (li * 0.01)) / ld;
+            // Calculating total payment 
+
+            const total = ((la / ld) + interest);
+            document.getElementById("box").innerHTML = "EMI : (₹)" + total;
+
+
+
+
+
+            document.getElementById("out").value = total;
+
+        }
+    </script>
+</head>
+
+<body>
+    <center>
+        <form>
+            <fieldset style="width: 300px;">
+                <table bgcolor="magenta">
+                    <tr>
+                        <td>LONE AMOUNT</td>
+                        <td><input type="number" id="lamt" placeholder="ENTER AMOUNT"></td>
+                    </tr>
+                    <tr>
+                        <td>LONE DURATION</td>
+                        <td><input type="number" id="ltim" placeholder="ENTER TENURE"></td>
+                    </tr>
+                    <tr>
+                        <td>RATE OF INTREST %</td>
+                        <td><input type="number" id="lint" placeholder="RATE OF INTREST"></td>
+                    </tr>
+                    <tr>
+                        <td>EMI</td>
+                        <td><input type="number" id="out"></td>
+                    </tr>
+                    <td><input type="button" value="calculate" onclick="Ecalculater();"></td>
+                </table>
+                <div id="box"></div>
+            </fieldset>
+        </form>
+    </center>
+</body>
+
+</html>

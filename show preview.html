@@ -1,0 +1,53 @@
+<html>
+  <head>
+       <style>
+        #box {
+          width: 300px;
+          height: 200px;
+          overflow: scroll;
+          border: 2px solid green;
+          font-size: 20px;
+          color: snow;
+          box-shadow: 10px;
+          background: deepskyblue;
+        }
+      </style>
+      
+      <script type="text/JavaScript">
+      function ShowName(){
+        fn=document.getElementById("fnm").value;
+        mn=document.getElementById("mnm").value;
+        ln=document.getElementById("lnm").value;
+
+        document.getElementById("box").innerHTML="Frist Name:-"+fn+"<br>"+"Middle Name:-"+mn+"<br>"+"Last Name:-"+ln;
+      }
+      </script>
+  </head>
+  <center>
+  <body>
+  <form>
+    <fieldset style="width: 300px">
+  <table align="center" >
+  <tr><td><b>Frist:-</b> </td><td><input placeholder="Enter first name" type="text" id="fnm"></td></tr>
+  <tr><td><b>Middle:-</b></td><td><input placeholder="Enter middle name" type="text" id="mnm"></td></tr>
+  <tr><td><b>Last:-</b></td><td><input placeholder="Enter last name" type="text" id="lnm"></td></tr>
+   <tr><td>
+    </table>
+    </fieldset>
+   <br>
+    <fieldset style="width: 300px">
+    <center>
+     <b>BOX</b>
+              <b><hr color="purple"></b>
+
+     <table bgcolor="voilet" colspan="2">
+       <tr><td align="center"><input type="button" value="ShowName" onclick="ShowName()"></td></tr>
+     </table>
+     <br>
+    </center>
+  </form>
+  </body>
+   <div id="box"></div>
+   </center>
+   </fieldset>
+</html>

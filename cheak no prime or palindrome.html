@@ -1,0 +1,183 @@
+<html>
+
+<head>
+  <style>
+    #box {
+      width: 300px;
+      height: 200px;
+      overflow: scroll;
+      border: 2px solid green;
+      font-size: 20px;
+      color: voilet;
+      background: deepskyblue;
+    }
+  </style>
+
+  <script>
+    function p() {
+
+      var n, i, flag = true;
+
+      // Getting the value form text
+      // field using DOM
+      n = document.getElementById("txt").value;
+      for (i = 2; i <= n - 1; i++)
+        if (n % i == 0) {
+          flag = false;
+          break;
+        }
+
+      // Check and display alert message
+      if (flag == true)
+        document.getElementById("box").innerHTML = "Prime";
+      else
+        document.getElementById("box").innerHTML = "not Prime";
+    }
+
+    function Armstrong()
+    {
+      var flag, number, remainder, addition = 0;
+      number = document.getElementById("txt").value;
+
+      flag = number;
+      while (number > 0)
+      {
+        remainder = number % 10;
+        addition = addition + remainder * remainder * remainder;
+        number = parseInt(number / 10);
+      }
+
+      if (addition == flag)
+      {
+        document.getElementById("box").innerHTML = "Armstrong";
+      }
+      else
+      {
+        document.getElementById("box").innerHTML = "not Armstrong";
+      }
+    }
+
+    function Palindrome()
+    {
+      var
+        inputNumber = document.getElementById("txt").value;
+      if (isNaN(inputNumber))
+      {
+        document.getElementById("txt").innerHTML = "Wrong Input";
+      }
+      else
+      {
+        var holdNumber = inputNumber;
+        var reverseNumber;
+        var rem = 0;
+        for (; inputNumber != 0;)
+        {
+          reverseNumber = parseInt(inputNumber % 10);
+          inputNumber = parseInt(inputNumber / 10);
+          rem = rem * 10 + reverseNumber;
+          reverseNumber = rem;
+        }
+        if (holdNumber == reverseNumber)
+          document.getElementById("box").innerHTML = "Input Number Is Palindrome";
+        else
+          document.getElementById("box").innerHTML = "Input Number Is Not Palindrome" + rem;
+      }
+    }
+
+    function perfectNumber()
+    {
+      var flag, number, remainder, addition = 0,
+        i;
+      number = document.getElementById("txt").value;
+      flag = number;
+      for (i = 0; i < number; i++)
+      {
+        remainder = number % i;
+        if (remainder == 0)
+        {
+          addition += i;
+        }
+      }
+      if (addition == flag)
+      {
+        document.getElementById("box").innerHTML = "The number is Perfect";
+      }
+      else
+      {
+        document.getElementById("box").innerHTML = "The number is not Perfect";
+      }
+    }
+
+    function Cprime() {
+      num = document.getElementById("txt").value;
+      if (num % 2 == 0)
+        document.getElementById("box").innerHTML = "is an even Number";
+      else
+        document.getElementById("box").innerHTML = "is an odd Number";
+    }
+
+    function isLeapYear() {
+
+      var year = document.getElementById("txt").value;
+
+      document.getElementById("box").innerHTML
+
+      = (year % 100 === 0) ? (year % 400 === 0)
+
+      :
+      (year % 4 === 0);
+
+    }
+  </script>
+
+  <html>
+
+<body>
+
+  </head>
+  <center>
+
+    <body>
+      <form>
+        <fieldset style="width: 300px">
+          <table align="center">
+
+            <tr>
+              <td><b>enter any no</b></td>
+              <td><input placeholder="Enter any number" type="text" id="txt"></td>
+            </tr>
+
+            <tr>
+              <td>
+          </table>
+        </fieldset>
+        <br>
+        <fieldset style="width: 300px">
+          <center> C p year 
+            <b>BOX</b>
+            <b>
+              <hr color="purple">
+            </b>
+
+            <table bgcolor="voilet" colspan="2">
+              <td><input type="button" value="ShowPrime" onclick="p()">
+                <input type="button" value="ShowArmstrong" onclick="Armstrong()">
+                <input type="button" value="ShowPalindrome" onclick="Palindrome()">
+                <br>
+                <hr>
+                <input type="button" value="ShowPerfect" onclick="perfectNumber()">
+                <input type="button" value="ShowOddEven" onclick="Cprime()">
+                <input type="button" value="leepyear" onclick="isLeapYear()">
+
+              </td>
+              </tr>
+            </table>
+            <br>
+          </center>
+      </form>
+    </body>
+    <div id="box"></div>
+  </center>
+  </fieldset>
+
+</html>

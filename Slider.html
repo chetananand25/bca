@@ -1,0 +1,95 @@
+<html><head><title>Image slider</title>
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+
+<style>
+
+
+#box {
+  padding :25px ;
+  margin: auto;
+    width: 500px;
+    height: 500px;
+    border: 2px solid green;
+    
+}
+#box img
+{
+  width : 500px ;
+  height: 500px ;
+}
+
+#slider{
+    padding :25px ;
+    width: 500px;
+    height: 500px;
+	  margin: auto;
+	  position: relative;
+		 }
+		 button{
+		 	padding: 20px;
+		 	border: none;
+		 	background: #37f;
+		 	font-size: 30px;
+		 	color: white;
+		 	position: absolute;
+		 	top:45%;
+		 	cursor: pointer;
+		 }
+
+      .next{
+        	border-radius: 10px 0px 0px 10px;
+        	margin-left: 500px;
+        }
+        .prew{
+         border-radius: 10px 0px 0px 10px;
+        margin-right: 500px; 
+        }
+
+
+</style>
+<script>
+      var images=["a.jpg","b.jpg", "c.jpg", "d.jpg", "e.jpg"];
+     var i= 0;
+
+     </script >
+     <script>
+        
+    function next() {
+
+      if (i >= images.length) {
+        alert('too far!');
+        return;
+      }
+      document.getElementById("myimages").src = images[i];
+      i++;
+      if (i==images.length)
+      i=0;
+    };
+
+
+    function Previous() {
+
+      if (i >= images.length) {
+        return;
+      }
+
+      document.getElementById("myimages").src = images[i];
+      i--;
+    };
+   
+    
+</script>	
+<div id="slider">
+		<div id="box">
+			<img src="a.jpg" id="myimages"  autoplay>
+		<!-- buttons for controls slider -->
+		</div>
+	<button class="prew" style="font-size:24px" onclick="Previous()"><i class="fas fa-angle-double-left"></i></button>
+	
+  	<button class="next"style="font-size:24px" onclick="next()">
+<i class="fas fa-angle-double-right"></i></button>
+</div>
+</body>
+</html>
+ 

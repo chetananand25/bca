@@ -1,0 +1,37 @@
+/*//w.a.p in javascript to input any matrix of any order after that print it.//*/
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>matrix</title>
+</head>
+
+<body>
+  <script>
+    r = parseInt(prompt("enter size of row"))
+    c = parseInt(prompt("enter size of column"))
+    var a = new Array(r);
+    document.write("<br><b>Creating Matrix</b><br>");
+    for (var i = 0; i < a.length; i++) {
+      a[i] = new Array(c);
+    }
+    var h = 0;
+    for (var i = 0; i < r; i++) {
+      for (var j = 0; j < c; j++) {
+        a[i][j] = h++;
+      }
+    }
+    document.write("<h3>MATRIX IS</h3><br>");
+
+    for (var i = 0; i < r; i++) {
+      for (var j = 0; j < c; j++) {
+        document.write(a[i][j] + " ");
+      }
+      document.write("<br>");
+    }
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>find squre</title>
+  <script>
+  var s,e,i;
+    function square(){
+     s= document.getElementById("t1").value;
+     e=document.getElementById("t2").value;
+     
+     document.write("<table><tr><th>Number</th><th>Squre</th></tr>");
+      for(i=s; i<=e; i++){
+        r=(i*i)
+        document.write("<tr><td>"+i+"</td><td>"+r+"</td></tr>")
+      }
+    document.write("</table>")
+    }
+  </script>
+</head>
+<body>
+  <center>
+  <fieldset style="width: 400px">
+    <table>
+      <tr>
+        <td>Start<input type="text" name="" id="t1"></td>
+        <td>End<input type="text" name="" id="t2"></td>
+      </tr>
+      <table>
+        <tr>
+          <td><button type="submit" onclick="square()">square</button></td>
+        </tr>
+      </table>
+    </table>
+    </fieldset>
+    </center>
+</body>
+</html>

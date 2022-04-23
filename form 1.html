@@ -1,0 +1,173 @@
+<html>
+    <head>
+        <title>
+            ragistration page
+        </title>
+        <body bgcolor="white" >
+            <form >
+                <table bgcolor="skyblue"  border="1" align="center">
+                    <tr>
+                        <td>
+                <table>
+                    <tr>
+                        <td align="center" colspan="2">
+                <b><h2 align ="center">Student Registration</h2></b>
+               <b><hr color="black"></b>
+                <table align="center">
+                <tr>
+                <td> Name : </td> <td><input type="text"> </td>
+               </tr>
+               <tr>
+                <td> Father's name : </td> <td><input type="text"> </td>
+               </tr>
+               
+                <tr>
+                     <td>Date of birth :</td> <td><input type="date"> </td>
+                </tr>
+                <tr>
+                <td>Email :</td> <td><input type="email"> </td>
+                </tr>
+                <tr>
+                <td>Mobile no :</td>  <td><input type="number"> </td>
+               </tr>
+               <tr>
+               <td>Aadhar no :</td>  <td><input type="number"> </td>
+               <tr>
+                <td>GENDER :</td> <td><input type="radio" id="GENDER" name="GENDER" value="M" />MALE
+                    <input type="radio" id="GENDER" name="GENDER" value="F"/>FEMALE 
+                </td>
+                 </tr>
+               <tr>
+                <td>Adress :</td>  <td> <textarea type="text" rows="4" cols=" " ></textarea></td>
+               </tr>
+               <tr>
+                <td>City</td> <td><input list="city">
+            
+                 <datalist id="city">
+                    <option value = "purnia" selected>purnia</option>
+                    <option value = "bhaglepur" selected>bhaglepur</option>
+                    <option value = "madhpura" selected>madhpura</option>
+                    <option value = "patna" selected>patna</option>
+                    <option value = "saharsha" selected>saharsha</option>
+                </datalist>
+               </tr>
+               <tr>
+                <td>Pincode</td>  <td><input type="number"> </td>
+                <tr>
+                    <tr>
+                        <td>State</td> <td><input list="State">
+                    
+                         <datalist id="State">
+                            <option value = "bihar" selected>bihar</option>
+                            <option value = "jharkhand" selected>jharkhand</option>
+                            <option value = "west bengal" selected>west bengal</option>
+                            <option value = "nepal" selected>nepal</option>
+                            <option value = "maharastra" selected>maharastra</option>
+                        </datalist>
+                       </tr>
+                       <tr>
+                        <td>country</td> <td><input list="country">
+                    
+                         <datalist id="country">
+                            <option value = "india" selected>india</option>
+                            <option value = "canada" selected>canada</option>
+                            <option value = "brazil" selected>brazil</option>
+                            <option value = "singapore" selected>singapore</option>
+                            <option value = "USA" selected>USA</option>
+                            <option value = "china" selected>china</option>
+                            <option value = "germany" selected>germany</option>
+                        </datalist>
+                       </tr>
+                        <tr>
+                           <td>Cource :</td> 
+                          <td> BCA<input type="checkbox" id="cource" name="cource" value="bca"/>
+                           BBA<input type="checkbox" id="cource" name="cource" value="BBA"/>
+                           B.COM<input type="checkbox" id="cource" name="cource" value="B.COM"/></td>
+                        </tr>
+                        <td>
+                        <tr>
+                             <td align=""><b>serial no</b></td>
+                             <td align=""><b>examination</b></td> 
+                             <td align=""><b>board</b></td>
+                             <td align=""><b>percentage</b></td>
+                             <td align=""><b>year of passing </b></td>
+                        </tr>
+
+                        <tr>
+                            <td>1</td>
+                            <td>class "x"</td>
+                            <td><input list="board">
+                            <datalist id="board">
+                                <option value = "bihar school examination board patna" selected>bihar school examination board patna</option>
+                                                                <option value = "Central board examination board patna" selected>Central board examination board patna</option>
+
+                            <td><input type="text" name="class x_board_percentage"></td>
+                            <td><input list="year">
+                            
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>class "xii"</td>
+                            <td><input list="board">
+                            <td><input type="text"></td>
+                            <td><input list="year">
+                                <datalist id="year">
+                                    <option value = "2015" selected>2015</option>
+                                    <option value = "2016" selected>2016</option>
+                                    <option value = "2017" selected>2017</option>
+                                    <option value = "2018" selected>2018</option>
+                                    <option value = "2019" selected>2019</option>
+                                    <option value = "2020" selected>2020</option>
+                                    <option value = "2021" selected>2021</option>
+                                </datalist>
+
+                            <tr>
+                                <td>3</td>
+                                <td>greduation</td>
+                                <td><input type="text" name="graduation_board"></td>
+                                <td><input type="text" name="graduation_percentage"></td>
+                                <td ><input list="year">
+                                
+                                      
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td align=""></td>
+                                <td align=""></td>
+                            </tr>
+                            <tr>
+                                <td>10th marksheet</td><td><input type="file" accept ="image/*"></td>
+                            </tr>
+                            <tr>
+                            <td>12th marksheet</td><td><input type="file" accept ="image/*"></td><td></td>
+                            </tr>
+                            <tr>
+                             <td>graduation marksheet</td><td><input type="file" accept ="image/*"></td>
+                            </tr>
+                            <table>
+                                
+                            <tr>
+                                <b><hr color="black"></b>
+                                <td><input type="submit" name="submit" value="submit"/>
+                                <input type="reset" name="reset" value="reset"/>
+                                <input type="button" name = "cancel" value="cancel"/></td>
+                            </tr>
+                            </table>
+
+                            </table>
+                        </td>
+                        </tr>
+                
+                </select>
+
+                </table>
+            </table>
+            </tr>
+                </td>
+               
+
+            </form>
+        </body>
+    </head>
+</html>

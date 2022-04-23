@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>cheak palindrom </title>
+<style>
+        #box {
+          width: 300px;
+          height: 200px;
+          overflow: scroll;
+          border: 2px solid green;
+          font-size: 20px;
+          color: voilet;
+          background: deepskyblue;
+        }#42445A
+      </style>
+
+      <script type="text/javascript">
+var num, i, chk=0;
+function CheakPrime(){
+num=parseINT(document.getElementById("txt").value);
+for(i=2; i<num; i++)
+}
+{
+  if(num%2==0)
+  {
+    chk++;
+    break;
+  }
+}
+{
+if(chk==0)
+  	document.getElementById("box").innerHTML="prime no";
+  else
+  	document.getElementById("box").innerHTML="not prime";
+ }
+
+      	
+      		
+
+function cheakPlin(){
+	n= parseINT(document.getElementById("txt"),value);
+	num=n
+	while (num>0){
+		d=num%10
+		sum=sum+d+d+d
+		num=parseINT(num/10)
+	}
+	if (sum==n)
+		document.getElementById("box").innerHTML="armstrong"
+
+	else
+		document.getElementById("box").innerHTML=" motarmstrong"
+	}
+
+
+      </script>
+
+</head>
+<body>
+<center>
+	<table>
+		
+<tr><td>enteranyno</td><td><input type="text" id="txt"></td></tr>
+<tr><td><input type="button" value="cheakprime" onclick="CheakPrime()"></td>
+<td><input type="button" value="cheak armstrong" onclick="cheakPlin()"></td>
+</tr>
+	</table>
+</center>
+<div id="box"></div>
+</body>
+</html>

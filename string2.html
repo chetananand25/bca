@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>STRING</title>
+  <style>
+    #box {
+      width: 300px;
+      height: 200px;
+      overflow: scroll;
+      border: 2px solid green;
+      font-size: 20px;
+      color: voilet;
+      background: deepskyblue;
+    }
+  </style>
+  <script>
+    function ShowChars() {
+      var str = document.getElementById("mystr").value;
+      var output = str.charAt();
+      document.getElementById("box").innerHTML = output;
+    }
+
+    function toLower() {
+
+      var lower = document.getElementById("mystr").value;
+      var output1 = lower.toLowerCase();
+      document.getElementById("box").innerHTML = output1;
+    }
+
+    function toUpper() {
+      var upper = document.getElementById("mystr").value;
+      var output2 = upper.toUpperCase();
+      document.getElementById("box").innerHTML = output2;
+    }
+
+
+    function PaLinDromE()
+    {
+      // variable holds reverse string
+      var newstr = "";
+      str = document.getElementById("mystr").value;
+      for (var i = str.length - 1; i >= 0; i--)
+      {
+        newstr += str[i];
+      }
+      document.getElementById("box").innerHTML = str + "<br>" + newstr;
+    }
+  </script>
+
+</head>
+<center>
+
+  <body>
+    <form>
+      <fieldset style="width: 300px">
+        <table align="center">
+          <tr>
+            <td>input Any String</td>
+            <td><input type="text" id="mystr" </td>
+          </tr>
+        </table>
+      </fieldset>
+      <br>
+
+      <fieldset style="width: 300px">
+        <center>
+          <b>BOX</b>
+          <b>
+            <hr color="purple">
+          </b>
+
+          <table bgcolor="voilet" colspan="2">
+            <tr>
+              <td align="center">
+                <input type="button" value=" all characters" onclick="ShowChars()">
+              </td>
+            </tr>
+          </table>
+          <br>
+          <div id="box"></div>
+        </center>
+        </table>
+
+  </body>
+
+</html>

@@ -1,0 +1,128 @@
+<html>
+
+<head>
+  <title>marksheet</title>
+  <style>
+    #box {
+      width: 300 px;
+      height: 200px;
+      overflow: scroll;
+      border: 2px solid green;
+      font-size: 20px;
+      color: white;
+      background: black;
+    }
+  </style>
+  <script>
+    var roll, num, course, m1, m2, m3, m4, tm, pm, rm, dob, gen, nt;
+
+    function calculatemarks()
+    {
+      m1 = parseInt(document.getElementById("t1").value);
+      m2 = parseInt(document.getElementById("t2").value);
+      m3 = parseInt(document.getElementById("t3").value);
+      m4 = parseInt(document.getElementById("t4").value);
+      tm = m1 + m2 + m3 + m4
+      pm = tm / 4;
+      if (pm >= 95)
+        rm = "outstanding";
+      else if (pm > 90)
+        rm = "excellent";
+      if (pm >= 75)
+        rm = "very good";
+      if (pm >= 60)
+        rm = "good";
+      if (pm >= 45)
+        rm = "poor";
+      else
+        rm = "fail"
+      document.getElementById("tm") = tm;
+      document.getElementById("pm") = pm;
+      document.getElementById("rm") = rm;
+    }
+
+    function Showmarks()
+    {
+      roll = document.getElementById("roll").value;
+      nm = document.getElementById("nm").value;
+      cs= document.getElementById("cs").value;
+      if (document.getElementById("r1").checked == true)
+        gen = document.getElementById("r1").value
+      else if (document.getElementById("r2").checked == true)
+        gen = document.getElementById("r2").value
+      if (document.getElementById("r3").checked == true)
+        nt = document.getElementById("r3").value
+      else if (document.getElementById("r4").checked == true)
+        nt = document.getElementById("r4").value
+      dob = document.getElementById("dob").value document.getElementById("box").innerHTML = "roll no=" + roll + "<br>" + "name=" + nm + "<br>" + "gender=" + gen + "<br>" + "nationality=" + nt + "<br>" + "total marks=" + tm + "<br>" + "precentage marks=" + pm + "<br>" + remarks = "+ rm;
+
+
+    }
+  </script>
+</head>
+<table border="1" allign="center" height="100%" width="40%" cellspacing="0">
+
+  <body bgcolor="megenta">
+    <tr>
+      <td bgcolor="grey">
+        <form action="#">
+          <center>
+            <h1> marksheet </h1>
+      </td>
+    </tr>
+    <br>
+    <td bgcolor="white">
+      roll no:<input type="number" required placeholder="enter roll no" id="roll"><br><br>
+      name:<input type="text" id="nm" required placeholder="enter name"><br><br>
+      DOB:<input type="date" id="dob" required placeholder="enter dob"><br><br>
+      select course:
+      <select id="cs" required>
+        <option>select</option>
+        <option>B.A</option>
+        <option>B.S.C</option>
+        <option>B.C.A</option>
+        <option>Bsc(it)</option>
+        <option>B.com</option>
+
+      </select><br><br>
+      <fieldset style="width: 100;">
+        <legend>gender</legend>
+        <input type="radio" name="gender" id="r1" value="male" required>male<br>
+        <input type="radio" name="gender" id="r2" value="female" required>female<br>
+        <legend>nationality</legend>
+        <input type="radio" name="nationality" id="r3" value="indian" required>INDIAN<br>
+        <input type="radio" name="nationality" id="r4" value="NRI" required>NRI<br>
+      </fieldset>
+      <fieldset style="width: 500;">
+        
+        
+        <center>
+          <legend>marksheet details</legend>
+        </center><br>
+        C <input type="number" name="marksheet details" id="t1" required><br><br>
+        C++ <input type="number" name="marksheet details" id="t2" required><br><br>
+        JAVA <input type="number" name="marksheet details" id="t3" required><br><br>
+        <center><input type="button" value="calculate" onclick="calculatemarks();" )</center>
+      </fieldset>
+      total marks : <input type="number" id="tm" required autofocus><br><br>
+      
+      precentage : &nbsp;&nbsp;<input type="number" id="pm" required minlength="1" maxlength="100" autofocus><br><br>
+      
+      remarks : <input type="text" id="rm" required autofocus><br><br>
+      
+      <center>
+        <input type="button" value="show" onclick="showmarks();">
+        <input type="reset" value="reset">
+        <input type="button" value="exit" onclick="window.close();">
+      </center>
+      </form>""
+      </center>
+</table>
+<center>
+  <div id="box"></div>
+</center>
+
+</td>
+</body>
+
+</html>

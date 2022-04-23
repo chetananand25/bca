@@ -1,0 +1,154 @@
+<html>
+
+<head>
+    <title>EMPLOYEE SLIP</title>
+    <style>
+        #box {
+            width: 300px;
+            height: 200px;
+            overflow: scroll;
+            border: 2px solid green;
+            font-size: 20px;
+            color: magenta;
+            background: snow;
+        }
+        
+        #42445A
+    </style>
+    <script type="text/JavaScript">
+
+       function CalculateSalary() {
+      bs = parseInt(document.getElementById("empid").value)
+      if (bs >= 20000)
+      {
+        ta = bs * 90/100;
+        da = bs * 30/100;
+        ma = bs * 20/100;
+        pf = bs * 15/100;
+      }
+      else if (bs <= 10000)
+      {
+          ta = bs * 30 / 100;
+          da = bs * 80 / 100;
+          ma = bs * 10 / 100;
+          pf = bs * 15 / 100;
+      }
+      else
+      {
+              ta = bs * 10 / 100;
+              da = bs * 70 / 100;
+              ma = bs * 8 / 100;
+              pf = bs * 10 / 100;
+    }
+      gross = bs + ta + da + ma;
+      net=gross-pf
+      document.getElementById("empta").value = ta;
+      document.getElementById("empda").value = da;
+      document.getElementById("empma").value = ma;
+      document.getElementById("emppf").value = pf;
+      document.getElementById("gross").value = gross;
+      document.getElementById("net").value = net;
+    }
+    
+          function ShowOutput() {
+            eid = document.getElementById("empid").value;
+            enm = document.getElementById("empnm").value;
+            pst = document.getElementById("post").value;
+            bsi = document.getElementById("empbs").value;
+            jd = document.getElementById("empjd").value;
+            gs = document.getElementById("gross").value;
+            ns = document.getElementById("net").value;
+
+            document.getElementById("box").innerHTML = "Employee id=" + eid + "<br>" + "employee name="+enm+"<br>"+"Post="+pst+"<br>"+"Badic salary"+bs+"<br>"+"Joining date="+jd+"<br>"+"Ta="+ta+"<br>"+"Da="+da+"<br>"+"Ma="+ma+"<br>"+"Pf="+pf;
+            }</script>
+</head>
+
+<body bgcolor="white">
+    <center>
+        <fieldset style="width: 300px">
+            <form>
+                <table bgcolor="skyblue" align="center">
+                    <tr>
+                        <td align="center" colspan="2">
+                            <h3>EMPLOYEE SLIP</h3>
+                            <b>
+              <hr color="green">
+            </b>
+
+                            <tr>
+                                <td>EMPLOYEE ID:-</td>
+                                <td><input type="number" id="empid"></td>
+                            </tr>
+                            <tr>
+                                <td> EMPLOYEE NAME:-</td>
+                                <td><input type="text" id="empnm"></td>
+                            </tr>
+                            <tr>
+                                <td>SELECT POST:-</td>
+                                <td><select id="post">
+                                            <option>CLARK</option>
+              <option>SOFTWARE</option>
+              <option>MANAGER</option>
+            </select></td>
+                            </tr>
+                            <tr>
+                                <td>BASIC SALARY:-</td>
+                                <td><input type="text" id="empbs"></td>
+                            </tr>
+                            <tr>
+                                <td>JOINING DATE:-</td>
+                                <td><input type="date" id="empjd"> </td>
+                            </tr>
+                </table>
+                <hr color="voilet">
+                <table bgcolor="skyblue">
+                    <tr>
+                        <td colspan="2"><input type="button" value="SHOW" onclick="ShowOutput()"></td>
+                        <td colspan="2"><input type="button" value="CALCULATE" onclick="CalculateSalary()"></td>
+                        <td colspan="2"><input type="button" value="EXIT" onclick="window.close"></td>
+                    </tr>
+                </table>
+                <br>
+                <table bgcolor="#FF69B4" align="center">
+                    <tr>
+                        <td align="center" colspan="3">
+                            <h3>Result</h3>
+                            <b>
+                <hr color="green">
+              </b>
+                            <tr>
+                                <td>TA</td>
+                                <td><input type="text" id=empta></td>
+                            </tr>
+                            <tr>
+                                <td>DA</td>
+                                <td><input type="text" id="empda"></td>
+                            </tr>
+                            <tr>
+                                <td>MA</td>
+                                <td><input type="text" id="empma"></td>
+                            </tr>
+                            <tr>
+                                <td>PF</td>
+                                <td><input type="text" id="emppf"></td>
+                            </tr>
+                            <tr>
+                                <td>GROSS SALARY</td>
+                                <td><input type="text" id="gross"></td>
+                            </tr>
+                            <tr>
+                                <td>NET SALARY</td>
+                                <td><input type="text" id="net"></td>
+                            </tr>
+                </table>
+                <h5>Output box</h5>
+                <hr color="magenta">
+                <div id="box"></div>
+
+        </fieldset>
+
+        </form>
+    </center>
+</body>
+
+</html>
